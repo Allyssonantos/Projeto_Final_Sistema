@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizzaria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo da Pizzaria" class="logo">
+        <h1>Bem-vindo à Nossa Pizzaria</h1>
+        <p>Aberto das 18:00 às 23:59 | 10% de desconto para pedidos online!</p>
+    </header>
+    
+    <nav>
+        <button class="categoria">Pizzas</button>
+        <button class="categoria">Combos</button>
+        <button class="categoria">Bebidas</button>
+    </nav>
+    
+    <section class="busca">
+        <input type="text" id="buscar" placeholder="Digite para buscar um item">
+    </section>
+    
+    <<main>
+        <h1>Menu Pizzas</h1>
+        <section class="menu">
+            <div class="item">
+                <img src="pizza1.jpg" alt="Pizza Calabresa">
+                <h2>Pizza Calabresa</h2>
+                <p>Deliciosa pizza de calabresa com queijo.</p>
+                <span class="preco">R$ 35,00</span>
+                <button onclick="adicionarAoCarrinho('pizza', 1)">Mussarela - R$ 30</button></li>
+            </div>
+            <div class="item">
+                <img src="pizza2.jpg" alt="Pizza Marguerita">
+                <h2>Pizza Marguerita</h2>
+                <p>Tradicional pizza marguerita.</p>
+                <span class="preco">R$ 40,00</span>
+                <button onclick="adicionarAoCarrinho('pizza', 2)">Mussarela - R$ 30</button></li>
+            </div>
+        </section>
+        
+        <h2>Carrinho</h2>
+       <ul id="carrinho"></ul>
+       <p id="total">Total: R$ 0,00</p>
+       <button onclick="finalizarPedido()">Finalizar Pedido</button>
+    </main>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
