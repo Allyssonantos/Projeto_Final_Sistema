@@ -7,46 +7,71 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!--Nave Bar-->
+    <nav class="navbar">
+        <div class="nav-buttons">
+            <button>Pizzas</button>
+            <button>Combos</button>
+            <button>Bebidas</button>
+        </div>
+    </nav>
+    
+    <!--Logo-->
+
     <header>
-        <img src="logo.png" alt="Logo da Pizzaria" class="logo">
+        <img src="./img/logo_pizzaria.png" alt="Logo da Pizzaria" class="logo">
         <h1>Bem-vindo à Nossa Pizzaria</h1>
         <p>Aberto das 18:00 às 23:59 | 10% de desconto para pedidos online!</p>
     </header>
     
-    <nav>
-        <button class="categoria">Pizzas</button>
-        <button class="categoria">Combos</button>
-        <button class="categoria">Bebidas</button>
-    </nav>
+    <h1 class="menu_h1">Menu Pizzas</h1>
     
-    <section class="busca">
-        <input type="text" id="buscar" placeholder="Digite para buscar um item">
-    </section>
-    
-    <<main>
-        <h1>Menu Pizzas</h1>
-        <section class="menu">
-            <div class="item">
+    <div class="container">
+        <div class="produtos">
+            <div class="produto">
                 <img src="pizza1.jpg" alt="Pizza Calabresa">
                 <h2>Pizza Calabresa</h2>
                 <p>Deliciosa pizza de calabresa com queijo.</p>
                 <span class="preco">R$ 35,00</span>
                 <button onclick="adicionarAoCarrinho('pizza', 1)">Mussarela - R$ 30</button></li>
             </div>
-            <div class="item">
+            
+            <div class="produto">
                 <img src="pizza2.jpg" alt="Pizza Marguerita">
                 <h2>Pizza Marguerita</h2>
                 <p>Tradicional pizza marguerita.</p>
                 <span class="preco">R$ 40,00</span>
                 <button onclick="adicionarAoCarrinho('pizza', 2)">Mussarela - R$ 30</button></li>
             </div>
-        </section>
+
+            <div class="produto">
+                <img src="pizza1.jpg" alt="Pizza Calabresa">
+                <h2>Pizza Calabresa</h2>
+                <p>Deliciosa pizza de calabresa com queijo.</p>
+                <span class="preco">R$ 35,00</span>
+                <button onclick="adicionarAoCarrinho('pizza', 1)">Mussarela - R$ 30</button></li>
+            </div>
+            
+            <div class="produto">
+                <img src="pizza2.jpg" alt="Pizza Marguerita">
+                <h2>Pizza Marguerita</h2>
+                <p>Tradicional pizza marguerita.</p>
+                <span class="preco">R$ 40,00</span>
+                <button onclick="adicionarAoCarrinho('pizza', 2)">Mussarela - R$ 30</button></li>
+            </div>
+        </div>
+
+        <div class="carrinho">
+            <h2>Carrinho</h2>
+            <ul id="carrinho"></ul>
+            <p id="total">Total: R$ 0,00</p>
+            <button onclick="finalizarPedido()">Finalizar Pedido</button>
+
+        </div>
+    </div>
+
         
-        <h2>Carrinho</h2>
-       <ul id="carrinho"></ul>
-       <p id="total">Total: R$ 0,00</p>
-       <button onclick="finalizarPedido()">Finalizar Pedido</button>
-    </main>
+   
     
     <script src="./script.js"></script>
 </body>

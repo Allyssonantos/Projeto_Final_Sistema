@@ -8,8 +8,34 @@ header {
     background-color: #d32f2f;
     color: white;
     text-align: center;
-    padding: 15px;
-    font-size: 24px;
+    padding: 10px; 
+}
+
+header p h1 {
+    font-size: 28px;
+    color: white;
+
+}
+.navbar{
+    min-height: 40px; /* Altura mínima */
+    max-height: 40px; /* Altura máxima */
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    background-color: #d32f2f;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+    margin-left: auto; /* Empurra os botões para a direita */
+}
+
+.nav-buttons button {
+    padding: 10px 15px;
+    border: 1px solid black;
+    background-color: white;
+    cursor: pointer;
 }
 .menu {
     display: flex;
@@ -17,64 +43,67 @@ header {
     align-items: center;
     margin-top: 20px;
 }
-.item {
+
+.menu_h1{
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+/* Container principal */
+.container {
     display: flex;
-    background: white;
-    width: 80%;
-    max-width: 600px;
+    justify-content: space-between; /* Separa produtos e carrinho */
+    align-items: flex-start;
+    padding: 20px;
+}
+/* Carrinho fixo na lateral */
+.carrinho {
+    width: 25%;
+    min-height: 300px;
+    border: 2px solid #333;
     padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 20px; /* Mantém o carrinho visível ao rolar */
+    background-color: white;
+}
+
+/* Área dos produtos */
+.produtos {
+    width: 70%; /* Ocupa 70% da largura */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.produto {
+    width: 30%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
     margin-bottom: 15px;
 }
-.item img {
+
+.produto img{
     width: 100px;
     height: 100px;
     border-radius: 10px;
     margin-right: 15px;
+
 }
+
 .info {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-.cashback {
-    background: #28a745;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 12px;
-    margin-bottom: 5px;
-    display: inline-block;
-}
-h2 {
-    margin: 5px 0;
-    font-size: 18px;
-}
-p {
-    font-size: 14px;
-    color: #666;
-    margin: 5px 0;
-}
-.preco-antigo {
-    text-decoration: line-through;
-    color: red;
-    margin-right: 5px;
-}
+
 .preco {
     font-weight: bold;
     font-size: 16px;
     color: #000;
 }
-.btn {
-    background: #000;
-    color: white;
-    border: none;
-    padding: 8px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 5px;
-}
+
 .btn:hover {
     background: #444;
 }
